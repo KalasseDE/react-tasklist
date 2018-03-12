@@ -14,7 +14,7 @@ const List = props => {
 	return <ul className={ `Tasklist ${ dragging ? 'Tasklist--dragging' : '' }` }>
 		{ items.map( ( item, index ) =>
 			<Item
-				key={ item.label }
+				key={ item.id || item.label }
 				checked={ item.checked }
 				index={ index }
 				label={ item.label }
