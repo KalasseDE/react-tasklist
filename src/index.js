@@ -31,19 +31,15 @@ export default class Tasklist extends React.Component {
 	constructor( props ) {
 		super( props );
 
-		this.state = {
-			dragging: null,
-		};
+		this.state = { dragging: false };
 	}
 
 	onSortStart = item => {
-		this.setState( { dragging: item.index } );
+		this.setState( { dragging: true } );
 	}
 
 	onSortEnd = change => {
-		this.setState( {
-			dragging: null,
-		} );
+		this.setState( { dragging: false } );
 
 		const nextItems = arrayMove( this.props.items, change.oldIndex, change.newIndex );
 
