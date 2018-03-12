@@ -71,6 +71,12 @@ A sorted list of items to display on the list. Each item is an object with the f
 * `disabled` (`boolean`, default `false`): Is the checkbox disabled?
 * `id` (`string`, default `label`): Unique ID for the item. Value of `label` by default.
 
+### `disableSort`
+
+`Boolean`
+
+Whether sorting is disabled (e.g. for users without permission to edit the list).
+
 
 ### `onChange`
 

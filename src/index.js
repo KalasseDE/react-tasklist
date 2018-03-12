@@ -9,14 +9,16 @@ import Item from './Item';
 import './index.css';
 
 const List = props => {
-	const { dragging, items, onChange } = props;
+	const { disableSort, dragging, items, onChange } = props;
 
 	return <ul className={ `Tasklist ${ dragging ? 'Tasklist--dragging' : '' }` }>
 		{ items.map( ( item, index ) =>
 			<Item
 				key={ item.id || item.label }
 				checked={ item.checked }
+				disabled={ disableSort }
 				disableCheckbox={ item.disabled }
+				disableSort={ disableSort }
 				index={ index }
 				label={ item.label }
 				onChange={ value => onChange( index, value ) }
@@ -47,9 +49,10 @@ export default class Tasklist extends React.Component {
 	}
 
 	render() {
-		const { items } = this.props;
+		const { disableSort, items } = this.props;
 
 		return <SortableList
+			disableSort={ disableSort }
 			dragging={ this.state.dragging }
 			helperClass="Tasklist-Item--dragging"
 			lockAxis="y"
@@ -62,3 +65,7 @@ export default class Tasklist extends React.Component {
 		/>;
 	}
 }
+
+Tasklist.defaultProps = {
+	disableSort: false,
+};

@@ -7,6 +7,10 @@
 	transition: background 100ms, outline 100ms;
 }
 
+.Tasklist-Item--sort-disabled {
+	margin-left: -20px;
+}
+
 .Tasklist-Item:hover,
 .Tasklist-Item--dragging {
 	background: rgba( 0, 0, 0, 0.02 );

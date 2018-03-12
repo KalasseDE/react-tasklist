@@ -10,6 +10,7 @@ class Demo extends React.Component {
 		super( props );
 
 		this.state = {
+			enabled: true,
 			items: [
 				{
 					label: 'Item one',
@@ -44,10 +45,20 @@ class Demo extends React.Component {
 		return <div id={ styles.demo }>
 			<h1>react-tasklist Demo</h1>
 			<Tasklist
+				disableSort={ ! this.state.enabled }
 				items={ this.state.items }
 				onChange={ this.onChange }
 				onReorder={ items => this.setState( { items } ) }
 			/>
+			<label>
+				<input
+					checked={ this.state.enabled }
+					type="checkbox"
+					onChange={ e => this.setState( { enabled: e.target.checked } ) }
+				/>
+
+				Enable sorting
+			</label>
 		</div>;
 	}
 }
