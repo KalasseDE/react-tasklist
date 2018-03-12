@@ -1,16 +1,92 @@
 # react-tasklists
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+Simple task lists in React.
 
-Describe react-tasklists here.
+## Installation
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+```sh
+npm install --save @humanmade/react-tasklists
+```
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+## Usage
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+```js
+import Tasklist from '@humanmade/react-tasklists';
+
+class MyComponent extends React.Component {
+	constructor( props ) {
+		super( props );
+
+		this.state = {
+			items: [
+				{
+					label: 'Item one',
+					checked: false,
+				},
+				{
+					label: 'Item two',
+					checked: false,
+				},
+				{
+					label: 'Item three',
+					checked: true,
+				},
+			],
+		};
+	}
+
+	onChange = ( index, checked ) => {
+		const { items } = this.state;
+		this.setState( {
+			items: [
+				...items.slice( 0, index ),
+				{ ...items[ index ], checked },
+				...items.slice( index + 1 )
+			],
+		} );
+	}
+
+	render() {
+		const { items } = this.state;
+
+		return <Tasklist
+			items={ items }
+			onChange={ this.onChange }
+			onReorder={ items => this.setState( { items } ) }
+		/>
+	}
+```
+
+## Props API
+
+### `items`
+
+A sorted list of items to display on the list. Each item is an object with the following properties:
+
+* `label` (required, `string|ReactElement`): Label for the item. May be a React element.
+* `checked` (required, `boolean`): Checkbox state.
+* `disabled` (`boolean`, default `false`): Is the checkbox disabled?
+* `id` (`string`, default `label`): Unique ID for the item. Value of `label` by default.
+
+
+### `onChange`
+
+`( index: Number, checked: Boolean ) => void`
+
+Callback function for when the checked state of an item changes. Passed following parameters:
+
+* `index` (`Number`): Index of the item which changed.
+* `checked` (`Boolean`): True if the new state is checked, false if the new state is unchecked.
+
+
+### `onReorder`
+
+`( items: Array, oldIndex: Number, newIndex: Number ) => void`
+
+Callback function for when items are reordered. This receives the reordered items for convenience, but you can use the `oldIndex` and `newIndex` parameters to manually reorder your items if you'd prefer.
+
+Passed following parameters:
+
+* `items` (`Array`): Reordered list of items.
+* `oldIndex` (`Number`): Index of the item in the original array.
+* `newIndex` (`Number`): Index of the item in the new array.

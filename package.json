@@ -18,7 +18,10 @@
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react-dnd": "^2.5.4",
+    "react-sortable-hoc": "^0.6.8"
+  },
   "peerDependencies": {
     "react": "16.x"
   },

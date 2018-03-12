@@ -1,0 +1,40 @@
+.Tasklist-Item {
+	list-style: none;
+	margin-left: -34px;
+	display: flex;
+	background: transparent;
+	outline: 1px solid transparent;
+	transition: background 100ms, outline 100ms;
+}
+
+.Tasklist-Item:hover,
+.Tasklist-Item--dragging {
+	background: rgba( 0, 0, 0, 0.02 );
+	outline: 1px solid rgba( 0, 0, 0, 0.04 );
+}
+
+.Tasklist-Item_handle {
+	opacity: 0;
+	transition: opacity 100ms;
+}
+
+.Tasklist-Item:hover .Tasklist-Item_handle,
+.Tasklist-Item--dragging .Tasklist-Item_handle {
+	opacity: 1;
+}
+
+.Tasklist-Item_handle svg {
+	width: 10px;
+	height: 10px;
+	vertical-align: middle;
+}
+
+.Tasklist-Item_handle svg rect {
+	fill: rgba( 0, 0, 0, 0.5 );
+}
+
+.Tasklist-Item > label {
+	display: block;
+	cursor: pointer;
+	flex-grow: 1;
+}

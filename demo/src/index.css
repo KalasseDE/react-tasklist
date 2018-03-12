@@ -1,0 +1,12 @@
+body {
+	background: #f1f1f1;
+}
+
+#demo {
+	box-sizing: border-box;
+
+	margin: 0 auto;
+	width: 600px;
+	background: #fff;
+	padding: 1rem;
+}
