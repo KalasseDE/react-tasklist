@@ -55,7 +55,7 @@ export default class Tasklist extends React.Component {
 
 		return <SortableList
 			dragging={ this.state.dragging }
-			helperClass="TaskList-Item--dragging"
+			helperClass="Tasklist-Item--dragging"
 			lockAxis="y"
 			lockToContainerEdges={ true }
 			items={ items }
