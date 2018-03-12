@@ -1,5 +1,5 @@
 {
-  "name": "react-tasklist",
+  "name": "@humanmade/react-tasklist",
   "version": "1.0.0",
   "description": "react-tasklist React component",
   "main": "lib/index.js",
