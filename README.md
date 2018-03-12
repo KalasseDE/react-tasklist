@@ -2,6 +2,8 @@
 
 Simple task lists in React.
 
+![Demo GIF](https://user-images.githubusercontent.com/21655/37268389-620dc798-2611-11e8-91bf-8b257b4f814a.gif)
+
 ## Installation
 
 ```sh
