@@ -41,7 +41,7 @@ class Demo extends React.Component {
 
 	render() {
 		return <div id={ styles.demo }>
-			<h1>react-tasklists Demo</h1>
+			<h1>react-tasklist Demo</h1>
 			<Tasklist
 				items={ this.state.items }
 				onChange={ this.onChange }

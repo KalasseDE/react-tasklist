@@ -1,7 +1,7 @@
 {
-  "name": "react-tasklists",
+  "name": "react-tasklist",
   "version": "1.0.0",
-  "description": "react-tasklists React component",
+  "description": "react-tasklist React component",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [

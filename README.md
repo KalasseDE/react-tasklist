@@ -1,17 +1,17 @@
-# react-tasklists
+# react-tasklist
 
 Simple task lists in React.
 
 ## Installation
 
 ```sh
-npm install --save @humanmade/react-tasklists
+npm install --save @humanmade/react-tasklist
 ```
 
 ## Usage
 
 ```js
-import Tasklist from '@humanmade/react-tasklists';
+import Tasklist from '@humanmade/react-tasklist';
 
 class MyComponent extends React.Component {
 	constructor( props ) {
