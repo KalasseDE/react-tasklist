@@ -16,6 +16,7 @@ const List = props => {
 			<Item
 				key={ item.id || item.label }
 				checked={ item.checked }
+				disableCheckbox={ item.disabled }
 				index={ index }
 				label={ item.label }
 				onChange={ value => onChange( index, value ) }

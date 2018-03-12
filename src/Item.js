@@ -30,13 +30,14 @@ const Handle = SortableHandle( () =>
 
 export class Item extends React.Component {
 	render() {
-		const { checked, label, onChange } = this.props;
+		const { checked, disableCheckbox, label, onChange } = this.props;
 
 		return <li key={ label } className="Tasklist-Item">
 			<Handle />
 			<label>
 				<input
 					checked={ checked }
+					disabled={ !! disableCheckbox }
 					type="checkbox"
 					onChange={ e => onChange( e.target.checked ) }
 				/>

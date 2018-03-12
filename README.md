@@ -26,6 +26,7 @@ class MyComponent extends React.Component {
 				{
 					label: 'Item two',
 					checked: false,
+					disabled: true,
 				},
 				{
 					label: 'Item three',
