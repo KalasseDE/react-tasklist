@@ -21,7 +21,6 @@ const List = props => {
 				onChange={ value => onChange( index, value ) }
 			/>
 		) }
-		<li>Reference</li>
 	</ul>;
 };
 
