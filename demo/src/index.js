@@ -15,16 +15,16 @@ class Demo extends React.Component {
 			enabled: true,
 			items: [
 				{
-					label: 'Item one',
+					label: 'Item one (default unchecked)',
 					checked: false,
 				},
 				{
-					label: 'Item two',
+					label: 'Item two (disabled)',
 					checked: false,
 					disabled: true,
 				},
 				{
-					label: 'Item three',
+					label: 'Item three (default checked)',
 					checked: true,
 				},
 			],
