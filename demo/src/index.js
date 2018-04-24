@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 
 import Tasklist from '../../src';
 
+import '../../css/index.css';
+
 import styles from './index.css';
 
 class Demo extends React.Component {

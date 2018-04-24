@@ -15,6 +15,8 @@ npm install --save @humanmade/react-tasklist
 ```js
 import Tasklist from '@humanmade/react-tasklist';
 
+import '@humanmade/react-tasklist/css/index.css';
+
 class MyComponent extends React.Component {
 	constructor( props ) {
 		super( props );

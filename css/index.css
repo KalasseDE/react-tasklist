@@ -1,3 +1,7 @@
+.Tasklist--dragging {
+	user-select: none;
+}
+
 .Tasklist-Item {
 	list-style: none;
 	margin-left: -30px;

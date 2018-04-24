@@ -6,8 +6,6 @@ import {
 
 import Item from './Item';
 
-import './index.css';
-
 const List = props => {
 	const { disableSort, dragging, items, onChange } = props;
 

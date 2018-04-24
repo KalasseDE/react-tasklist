@@ -1,8 +1,6 @@
 import React from 'react';
 import { SortableElement, SortableHandle } from 'react-sortable-hoc';
 
-import './Item.css';
-
 const Handle = SortableHandle( () =>
 	<span className="Tasklist-Item_handle">
 		<svg viewBox="0 0 15 15">
