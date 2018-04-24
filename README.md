@@ -69,6 +69,7 @@ class MyComponent extends React.Component {
 A sorted list of items to display on the list. Each item is an object with the following properties:
 
 * `label` (required, `string|ReactElement`): Label for the item. May be a React element.
+* `task` (`boolean`, default `true`): Is this a task item? Set to `false` for regular list items.
 * `checked` (required, `boolean`): Checkbox state.
 * `disabled` (`boolean`, default `false`): Is the checkbox disabled?
 * `id` (`string`, default `label`): Unique ID for the item. Value of `label` by default.

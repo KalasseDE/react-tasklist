@@ -10,18 +10,30 @@ const List = props => {
 	const { disableSort, dragging, items, onChange } = props;
 
 	return <ul className={ `Tasklist ${ dragging ? 'Tasklist--dragging' : '' }` }>
-		{ items.map( ( item, index ) =>
-			<Item
-				key={ item.id || item.label }
-				checked={ item.checked }
-				disabled={ disableSort }
-				disableCheckbox={ item.disabled }
-				disableSort={ disableSort }
-				index={ index }
-				label={ item.label }
-				onChange={ value => onChange( index, value ) }
-			/>
-		) }
+		{ items.map( ( item, index ) => {
+			if ( 'task' in item && ! item.task ) {
+				return (
+					<li
+						key={ item.id || item.label }
+					>
+						{ item.label }
+					</li>
+				);
+			}
+
+			return (
+				<Item
+					key={ item.id || item.label }
+					checked={ item.checked }
+					disabled={ disableSort }
+					disableCheckbox={ item.disabled }
+					disableSort={ disableSort }
+					index={ index }
+					label={ item.label }
+					onChange={ value => onChange( index, value ) }
+				/>
+			);
+		} ) }
 	</ul>;
 };
 

@@ -27,6 +27,15 @@ class Demo extends React.Component {
 					label: 'Item three (default checked)',
 					checked: true,
 				},
+				{
+					label: 'Item four (regular item)',
+					task: false,
+				},
+				{
+					label: 'Item five (disabled checked)',
+					checked: true,
+					disabled: true,
+				},
 			],
 		};
 	}
